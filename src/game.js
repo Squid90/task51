@@ -1,4 +1,4 @@
-class Character {
+export default class Character {
   constructor(name, type) {
     try {
       if (name.length < 2 || name.length > 10) {
