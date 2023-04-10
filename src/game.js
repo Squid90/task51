@@ -1,59 +1,28 @@
 export default class Character {
   constructor(name, type) {
-    try {
-      if (name.length < 2 || name.length > 10) {
-        throw new Error('Имя указано неверно');
-      }
+    const arrType = ['Bowman', 'Swordsman', 'Magician', 'Daemon', 'Undead', 'Zombie'];
+
+    if (name.length < 2 || name.length > 10) {
+      throw new Error('Имя указано неверно');
+    } else {
       this.name = name;
-    } catch (err) {
-      // eslint-disable-next-line
-      console.log(err);
     }
 
-    try {
-      const arrType = ['Bowman', 'Swordsman', 'Magician', 'Daemon', 'Undead', 'Zombie'];
-      if (!arrType.includes(type)) {
-        throw new Error('Тип указан неверно');
-      }
+    if (!arrType.includes(type)) {
+      throw new Error('Тип указан неверно');
+    } else {
       this.type = type;
-    } catch (err) {
-      // eslint-disable-next-line
-      console.log(err);
     }
 
     this.health = 100;
     this.level = 1;
-
-    switch (type) {
-      case 'Bowman':
-        this.attack = 25;
-        this.defence = 25;
-        break;
-      case 'Swordsman':
-        this.attack = 40;
-        this.defence = 10;
-        break;
-      case 'Magician':
-        this.attack = 10;
-        this.defence = 40;
-        break;
-      case 'Undead':
-        this.attack = 25;
-        this.defence = 25;
-        break;
-      case 'Zombie':
-        this.attack = 40;
-        this.defence = 10;
-        break;
-      case 'Daemon':
-        this.attack = 10;
-        this.defence = 40;
-        break;
-      default:
-        break;
-    }
+    this.attack = undefined;
+    this.defence = undefined;
+   
   }
 }
+
+
 
 // eslint-disable-next-line
 const player1 = new Character('Legolas', 'Bowman');
