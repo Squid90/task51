@@ -1,10 +1,9 @@
-import Character from '../game';
-import Bowman from '../game';
-import Swordsman from '../game';
-import Magician from '../game';
-import Daemon from '../game';
-import Undead from '../game';
-import Zombie from '../game';
+import Bowman from '../bowman';
+import Swordsman from '../swordsman';
+import Magician from '../magician';
+import Daemon from '../daemon';
+import Undead from '../undead';
+import Zombie from '../zombie';
 
 const player1 = {
   name: 'Legolas', type: 'Bowman', health: 100, level: 1, attack: 25, defence: 25,
@@ -27,42 +26,42 @@ const player6 = {
 
 // eslint-disable-next-line
 test('check player1', () => {
-  const player = new Character('Legolas', 'Bowman');
+  const player = new Bowman('Legolas', 'Bowman');
   // eslint-disable-next-line
   expect(player).toEqual(player1);
 });
 
 // eslint-disable-next-line
 test('check player2', () => {
-  const player = new Character('Aragorn', 'Swordsman');
+  const player = new Swordsman('Aragorn', 'Swordsman');
   // eslint-disable-next-line
   expect(player).toEqual(player2);
 });
 
 // eslint-disable-next-line
 test('check player3', () => {
-  const player = new Character('Gandalf', 'Magician');
+  const player = new Magician('Gandalf', 'Magician');
   // eslint-disable-next-line
   expect(player).toEqual(player3);
 });
 
 // eslint-disable-next-line
 test('check player4', () => {
-  const player = new Character('Karl', 'Daemon');
+  const player = new Daemon('Karl', 'Daemon');
   // eslint-disable-next-line
   expect(player).toEqual(player4);
 });
 
 // eslint-disable-next-line
 test('check player5', () => {
-  const player = new Character('Freddy', 'Undead');
+  const player = new Undead('Freddy', 'Undead');
   // eslint-disable-next-line
   expect(player).toEqual(player5);
 });
 
 // eslint-disable-next-line
 test('check player6', () => {
-  const player = new Character('Bob', 'Zombie');
+  const player = new Zombie('Bob', 'Zombie');
   // eslint-disable-next-line
   expect(player).toEqual(player6);
 });
