@@ -18,11 +18,8 @@ export default class Character {
     this.level = 1;
     this.attack = undefined;
     this.defence = undefined;
-   
   }
 }
-
-
 
 // eslint-disable-next-line
 const player1 = new Character('Legolas', 'Bowman');
