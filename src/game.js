@@ -20,16 +20,3 @@ export default class Character {
     this.defence = undefined;
   }
 }
-
-// eslint-disable-next-line
-const player1 = new Character('Legolas', 'Bowman');
-// eslint-disable-next-line
-const player2 = new Character('Aragorn', 'Swordsman');
-// eslint-disable-next-line
-const player3 = new Character('Gandalf', 'Magician');
-// eslint-disable-next-line
-const player4 = new Character('Karl', 'Daemon');
-// eslint-disable-next-line
-const player5 = new Character('Freddy', 'Undead');
-// eslint-disable-next-line
-const player6 = new Character('Bob', 'Zombie');
