@@ -1,5 +1,8 @@
 {
   "name": "task51",
+  "jest": {
+    "testPathIgnorePatterns": ["src"]
+  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
