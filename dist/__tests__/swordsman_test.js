@@ -1,7 +1,7 @@
 const _swordsman = _interopRequireDefault(require('../swordsman'));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-// eslint-disable-next-line
+
 test('Проерка создания персонажа с типом Swordsman', () => {
   const swordsman = new _swordsman.default('Aragorn', 'Swordsman');
   const expected = {
@@ -12,11 +12,10 @@ test('Проерка создания персонажа с типом Swordsman
     attack: 40,
     defence: 10,
   };
-  // eslint-disable-next-line
+
   expect(swordsman).toEqual(expected);
 });
 
-// eslint-disable-next-line
 test('Проерка создания персонажа c именем больше 10 символов', () => {
   try {
     const swordsman = new _swordsman.default('Aragorn_very_long', 'Swordsman');
@@ -25,7 +24,6 @@ test('Проерка создания персонажа c именем боль
   }
 });
 
-// eslint-disable-next-line
 test('Проерка создания персонажа c именем менее 2 символов', () => {
   try {
     const swordsman = new _swordsman.default('A', 'Swordsman');
@@ -34,7 +32,6 @@ test('Проерка создания персонажа c именем мене
   }
 });
 
-// eslint-disable-next-line
 test('Проерка создания персонажа c отсутствующим типом', () => {
   try {
     const swordsman = new _swordsman.default('Aragorn', 'Dwarf');
