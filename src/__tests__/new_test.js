@@ -14,16 +14,31 @@ test('Проерка создания персонажа с типом Daemon', 
 });
 
 test('Проерка создания персонажа c именем больше 10 символов', () => {
+  // try {
+  //   const daemon = new Daemon('Karl_very_long', 'Daemon');
+  // } catch (err) {
+  //   expect(err).not.toBeNull();
+  // }
   const daemon = new Daemon('Karl_very_long', 'Daemon');
   expect(daemon).toThrowError();
 });
 
 test('Проерка создания персонажа c именем менее 2 символов', () => {
+  // try {
+  //   const daemon = new Daemon('K', 'Daemon');
+  // } catch (err) {
+  //   expect(err).not.toBeNull();
+  // }
   const daemon = new Daemon('K', 'Daemon');
   expect(daemon).toThrowError();
 });
 
 test('Проерка создания персонажа c отсутствующим типом', () => {
+  // try {
+  //   const daemon = new Daemon('Karl', 'Dwarf');
+  // } catch (err) {
+  //   expect(err).not.toBeNull();
+  // }
   const daemon = new Daemon('Karl', 'Dwarf');
   expect(daemon).toThrowError();
 });
