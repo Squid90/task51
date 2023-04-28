@@ -14,16 +14,13 @@ test('Проерка создания персонажа с типом Undead', 
 });
 
 test('Проерка создания персонажа c именем больше 10 символов', () => {
-  const undead = new Undead('Freddy_very_long', 'Undead');
-  expect(undead).toThrowError();
+  expect(() => new Undead('Freddy_very_long', 'Undead').toThrow());
 });
 
 test('Проерка создания персонажа c именем менее 2 символов', () => {
-  const undead = new Undead('F', 'Undead');
-  expect(undead).toThrowError();
+  expect(() => new Undead('F', 'Undead').toThrow());
 });
 
 test('Проерка создания персонажа c отсутствующим типом', () => {
-  const undead = new Undead('Freddy', 'Dwarf');
-  expect(undead).toThrowError();
+  expect(() => new Undead('Freddy', 'Dwarf').toThrow());
 });

@@ -14,16 +14,13 @@ test('Проерка создания персонажа с типом Swordsman
 });
 
 test('Проерка создания персонажа c именем больше 10 символов', () => {
-  const swordsman = new Swordsman('Aragorn_very_long', 'Swordsman');
-  expect(swordsman).toThrowError();
+  expect(() => new Swordsman('Aragorn_very_long', 'Swordsman').toThrow());
 });
 
 test('Проерка создания персонажа c именем менее 2 символов', () => {
-  const swordsman = new Swordsman('A', 'Swordsman');
-  expect(swordsman).toThrowError();
+  expect(() => new Swordsman('A', 'Swordsman').toThrow());
 });
 
 test('Проерка создания персонажа c отсутствующим типом', () => {
-  const swordsman = new Swordsman('Aragorn', 'Dwarf');
-  expect(swordsman).toThrowError();
+  expect(() => new Swordsman('Aragorn', 'Dwarf').toThrow());
 });

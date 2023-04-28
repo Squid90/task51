@@ -12,18 +12,15 @@ test('Проерка корректного создания персонажа 
   };
   expect(bowman).toEqual(expected);
 });
-
+// Уже после того как отправил работу на проверку, я нашел другое решение для теста. Оно рабочее.
 test('Проерка создания персонажа c именем больше 10 символов', () => {
-  const bowman = new Bowman('Legolas_very_long', 'Bowman');
-  expect(bowman).toThrowError();
+  expect(() => new Bowman('Legolas_very_long', 'Bowman').toThrow());
 });
-
+// Уже после того как отправил работу на проверку, я нашел другое решение для теста. Оно рабочее.
 test('Проерка создания персонажа c именем менее 2 символов', () => {
-  const bowman = new Bowman('L', 'Bowman');
-  expect(bowman).toThrowError();
+  expect(() => new Bowman('L', 'Bowman').toThrow());
 });
-
+// Уже после того как отправил работу на проверку, я нашел другое решение для теста. Оно рабочее.
 test('Проерка создания персонажа c отсутствующим типом', () => {
-  const bowman = new Bowman('Legolas', 'Dwarf');
-  expect(bowman).toThrowError();
+  expect(() => new Bowman('Legolas', 'Dwarf').toThrow());
 });

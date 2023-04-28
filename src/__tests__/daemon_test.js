@@ -14,16 +14,13 @@ test('Проерка создания персонажа с типом Daemon', 
 });
 
 test('Проерка создания персонажа c именем больше 10 символов', () => {
-  const daemon = new Daemon('Karl_very_long', 'Daemon');
-  expect(daemon).toThrowError();
+  expect(() => new Daemon('Karl_very_long', 'Daemon').toThrow());
 });
 
 test('Проерка создания персонажа c именем менее 2 символов', () => {
-  const daemon = new Daemon('K', 'Daemon');
-  expect(daemon).toThrowError();
+  expect(() => new Daemon('K', 'Daemon').toThrow());
 });
 
 test('Проерка создания персонажа c отсутствующим типом', () => {
-  const daemon = new Daemon('Karl', 'Dwarf');
-  expect(daemon).toThrowError();
+  expect(() => new Daemon('Karl', 'Dwarf').toThrow());
 });

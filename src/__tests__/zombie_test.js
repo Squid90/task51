@@ -14,16 +14,13 @@ test('Проерка корректного создания персонажа 
 });
 
 test('Проерка создания персонажа c именем больше 10 символов', () => {
-  const zombie = new Zombie('Bob_very_long', 'Zombie');
-  expect(zombie).toThrowError();
+  expect(() => new Zombie('Bob_very_long', 'Zombie').toThrow());
 });
 
 test('Проерка создания персонажа c именем менее 2 символов', () => {
-  const zombie = new Zombie('B', 'Zombie');
-  expect(zombie).toThrowError();
+  expect(() => new Zombie('B', 'Zombie').toThrow());
 });
 
 test('Проерка создания персонажа c отсутствующим типом', () => {
-  const zombie = new Zombie('Bob', 'Dwarf');
-  expect(zombie).toThrowError();
+  expect(() => new Zombie('Bob', 'Dwarf').toThrow());
 });

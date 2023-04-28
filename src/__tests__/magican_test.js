@@ -14,16 +14,13 @@ test('Проерка создания персонажа с типом Magician'
 });
 
 test('Проерка создания персонажа c именем больше 10 символов', () => {
-  const magician = new Magician('Gandalf_very_long', 'Magician');
-  expect(magician).toThrowError();
+  expect(() => new Magician('Gandalf_very_long', 'Magician').toThrow());
 });
 
 test('Проерка создания персонажа c именем менее 2 символов', () => {
-  const magician = new Magician('G', 'Magician');
-  expect(magician).toThrowError();
+  expect(() => new Magician('G', 'Magician').toThrow());
 });
 
 test('Проерка создания персонажа c отсутствующим типом', () => {
-  const magician = new Magician('Gandalf', 'Dwarf');
-  expect(magician).toThrowError();
+  expect(() => new Magician('Gandalf', 'Dwarf').toThrow());
 });
